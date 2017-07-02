@@ -1,0 +1,524 @@
+﻿<link href='https://wwwd.caf.fr/wtd-themeresponsivedesign-web/themes/html/ThemeResponsiveDesign/css/styles.css' rel="stylesheet">
+<link href='https://wwwd.caf.fr/wtd-themeresponsivedesign-web/themes/html/ThemeResponsiveDesign/images/favicon.ico' rel="shortcut icon" />
+
+<link href="https://wwwd.caf.fr/icf-statiques-angular/fonts-cnaf/roboto_cnaf.css" rel="stylesheet">
+<link href="https://wwwd.caf.fr/icf-statiques-angular/StatiquesCaffr/css/bootstrap.css?id=1498698187969" rel="stylesheet">
+<link href="https://wwwd.caf.fr/icf-statiques-angular/StatiquesCaffr/css/bootstrap-theme.css?id=1498698187969" rel="stylesheet">
+
+<script src="https://wwwd.caf.fr/icf-statiques-angular/jquery/1.11.2/jquery.min.js"></script>
+
+<script src="https://wwwd.caf.fr/icf-statiques-angular/angular/ui-bootstrap-custom-tpls-2.4.0.min.js"></script>
+<script src="https://wwwd.caf.fr/icf-statiques-angular/angular/ui-validate-1.2.2.min.js"></script>
+<script src="https://wwwd.caf.fr/icf-statiques-angular/angular/ng-file-upload.js"></script>
+<script src="https://wwwd.caf.fr/icf-statiques-angular/angular/ui-mask.min.js"></script>
+
+<script src="https://wwwd.caf.fr/icf-statiques-angular/StatiquesCaffr/js/bootstrap.min.js?id=1498698187969"></script>
+<script src="https://wwwd.caf.fr/icf-statiques-angular/StatiquesCaffr/js/headerCnaf.min.js?id=1498698187969"></script>
+<script src="https://wwwd.caf.fr/icf-statiques-angular/angular/bowser.js?id=1498698187969"></script>
+
+<script src="https://wwwd.caf.fr/icf-statiques-angular/StatiquesCaffr/js/carousel-swipe.min.js"></script>
+
+<script>
+    var contexteAffichageAngular = "Contacter ma Caf";
+</script>
+
+<!--[if lt IE 9]>
+    <script src="https://wwwd.caf.fr/icf-statiques-angular/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://wwwd.caf.fr/icf-statiques-angular/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<script src="https://wwwd.caf.fr/icf-statiques-angular/StatiquesCaffr/js/utilsangularCnaf/app.min.js?id=1498698187969"></script>
+
+<script src="https://wwwd.caf.fr/icf-statiques-angular/angular/smarttag.js"></script>
+
+
+<a class="sr-only" href="#theme-contenu-content-cnaf">Aller au contenu</a>
+<header id="theme-header-cnaf" role="banner">
+
+    <div id="theme-header-links-cnaf">
+        <div class="container">
+            <div class="row">
+                <form class="navbar-macaf-cnaf pull-right hidden" method="POST" action="https://www.caf.fr/allocataires/ma-caf-recherche/">
+                    <label for="ma-caf-code-postal">Ma Caf</label>
+                    <div class="input-group input-group-with-addon-cnaf">
+                        <input type="text" id="ma-caf-code-postal" name="zipcode" class="form-control" placeholder="Code postal" size="8" maxlength="5">
+                        <span class="input-group-addon">
+                            <input type="image" src="https://wwwd.caf.fr/icf-statiques-angular/images/pic-suite_bleu.png" onclick="this.src='https://wwwd.caf.fr/icf-statiques-angular/images/pic-suite_gris.png'">
+                            <input type="image" src="https://wwwd.caf.fr/icf-statiques-angular/images/pic-suite_gris.png" class="hidden"> <!-- Preload image -->
+                        </span>
+                    </div>
+                </form>
+
+
+                <script>
+								jQuery(document).ready(function() {
+									jQuery(document).on("focusout", "#theme-header-links-cnaf .navbar-macaf-cnaf", function(e){
+										setTimeout(function(){
+											var focus = jQuery(document.activeElement);
+											if (focus.is("#theme-header-links-cnaf .navbar-macaf-cnaf") || jQuery("#theme-header-links-cnaf .navbar-macaf-cnaf").has(focus).length ) {
+												// garde focus
+											} else {
+												// perd focus
+												jQuery('.navbar-macaf-cnaf').addClass('hidden');jQuery('.navbar-macaf-choix-cnaf').removeClass('hidden');jQuery('#ma-caf-code-postal').val('');
+											}
+										}, 0);
+									});
+								});
+                </script>
+                <div class="navbar-macaf-choix-cnaf pull-right">
+
+                    <a href="http://www.caf.fr/allocataires/caf-d-ille-et-vilaine" title="CAF D'ILLE ET VILAINE">Caf 35</a>
+                    <a href="#" class="btn-choix-cnaf" onclick="jQuery('.navbar-macaf-choix-cnaf').addClass('hidden');jQuery('#ma-caf-code-postal').val('');jQuery('.navbar-macaf-cnaf').removeClass('hidden');jQuery('#ma-caf-code-postal').focus();return false;" title="S'informer sur une autre Caf"><img class="pull-right" src="https://wwwd.caf.fr/icf-statiques-angular/images/pic_modifier.png" /></a>
+                </div>
+
+                <div class="navbar-links-cnaf pull-left">
+                    <span class="navbar-links-item-cnaf active">
+                        <a class="text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=allocataires" title="Espace allocataires">Allocataires</a>
+                    </span>
+                    <span class="navbar-links-item-cnaf">
+                        <a class="text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=partenaires" title="Espace partenaires">Partenaires</a>
+                    </span>
+                    <span class="navbar-links-item-cnaf">
+                        <a class="text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=presseInstitutionnel" title="Espace presse et institutionnel">
+                            <span class="hidden-xs">Presse et institutionnel</span>
+                            <span class="visible-xs">Presse/Instit.</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="theme-header-content-cnaf">
+        <div class="container">
+            <div class="row">
+
+                <a class="btn btn-active-cnaf btn-burger-cnaf collapsed text-uppercase" data-toggle="collapse" data-target="#theme-menu-collapse-cnaf" aria-expanded="false" href="#" onclick="return false">
+                    <span class="picto picto-burger"></span>
+                    <span>Menu</span>
+                </a>
+
+
+                <a class="btn btn-domaine-cnaf" href="https://wwwd.caf.fr/redirect/s/Redirect?page=accueilCaffr">
+
+                    <img alt="caf.fr" src="https://wwwd.caf.fr/icf-statiques-angular/images/logo_caf-fr.png">
+
+                </a>
+
+                <div>
+                    <div class="separator hidden-xs hidden-sm"></div>
+                </div>
+                <div class="titre-cnaf">
+
+                    <div class="sur-titre-cnaf hidden-xs hidden-sm text-uppercase">
+                        Mon Compte
+                    </div>
+
+
+                    <div class="sous-titre-cnaf hidden-xs hidden-sm text-uppercase">
+                        Contacter ma Caf
+                    </div>
+
+                </div>
+
+                <a class="btn text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=recherche">
+                    <span class="picto picto-recherche"></span>
+                    <span class="hidden-xs">Rechercher</span>
+                </a>
+
+
+                <a id="btn-menu-moncompte-cnaf" class="btn text-uppercase collapsed" data-toggle="collapse" data-target="#theme-menu-moncompte-collapse-cnaf" aria-expanded="false" href="#" onclick="return false">
+                    <span class="picto picto-mon-compte"></span>
+                    <span class="hidden-xs">Charly OuEst</span>
+                </a>
+                <a class="btn hidden-xs hidden-sm text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=monCompteDeconnexion">
+                    <span class="picto picto-mon-compte-deconnexion"></span>
+                    Déconnexion
+                </a>
+
+
+
+                <a class="btn btn-logo-cnaf hidden-xs" href="https://wwwd.caf.fr/redirect/s/Redirect?page=accueilCaffr">
+
+
+                    <img alt="Accueil caf.fr" src="https://www.caf.fr/sites/all/themes/caf_v2/images/logoCNAF.png">
+
+
+                </a>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="theme-menu-cnaf" role="navigation">
+    <div id="theme-menu-content-cnaf">
+        <div class="container">
+
+
+        </div>
+    </div>
+</nav>
+
+<!-- FIN HEADER -->
+<!-- TEST obsolesence des navigateurs  -->
+<script>
+				if ((bowser.msie && bowser.version < 11)
+	          		|| (bowser.chrome && bowser.version < 26)
+	          		|| (bowser.firefox && bowser.version < 1.5)) {
+
+	        		window.location.replace("https://www.caf.fr/navigateur-obsolete.html");
+	    		}
+</script>
+
+
+<!-- FIN TEST obsolesence des navigateurs  -->
+<!-- DEBUT CONTENU -->
+<main id="theme-contenu-cnaf" class="icf-angular-cnaf " role="main">
+
+
+
+
+
+
+
+    <div id="theme-contenu-filariane-cnaf">
+        <div class="container">
+            <div class="row">
+
+                <ol class="breadcrumb">
+
+
+                    <li><a href="https://wwwd.caf.fr/redirect/s/Redirect?page=accueilCaffr" title="Accueil">Accueil</a></li>
+
+
+
+
+
+
+
+                    <li><a title="Mon Compte" href="https://wwwd.caf.fr/redirect/s/Redirect?page=monCompte">Mon Compte</a></li>
+
+
+
+
+
+
+
+
+
+
+
+                    <li>Contacter ma Caf</li>
+
+
+
+
+
+
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="theme-contenu-content-cnaf">
+
+
+        <div class="container">
+            <h1 class="titre-page-cnaf text-primary text-uppercase">Contacter ma Caf</h1>
+        </div>
+
+
+
+        <h2 class="hidden sr-only">Contenu de la page</h2>
+
+
+        <div class="layoutRow">
+
+            <div class="layoutColumn">
+                <a name="Z7_6H4G19K0K0HUA0ATGJQKQA2082"></a><div class="wpsPortletBody">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <link href="https://wwwd.caf.fr/moncompteappli/dist/app.css" rel="stylesheet">
+                    <script src="https://wwwd.caf.fr/moncompteappli/dist/app.min.js"></script>
+
+                    <div id="ns_Z7_6H4G19K0K0HUA0ATGJQKQA2082_angularjsApp">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- uiView: contactcafView -->
+                                    <div>
+                                        <div class="row clearfix">
+                                            <div class="col-sm-6 col-md-4 col-sm-push-6 col-md-push-8">
+                                                <div class="row conteneur-contact-complet-cnaf collapsable-cnaf">
+                                                    <div class="col-sm-12"><h3 class="collapsable-heading-cnaf text-uppercase bg-primary">Contacter ma caf</h3></div>
+                                                    <div class="collapsable-body-cnaf col-sm-12 collapse in">
+                                                        <!-- ngSwitchWhen: loading --><!-- ngSwitchWhen: error --><!-- ngSwitchWhen: loaded -->
+                                                        <div>
+                                                            <div class="titre-cnaf">
+                                                                <span class="texte-ss-titre-cnaf picto-contacter-cnaf picto-telephone">Par téléphone</span>
+                                                                <div class="numero-cnaf">
+                                                                    <span class="picto picto-sva-cnaf tel-cnaf tel-cartouche-sva-cnaf">
+                                                                        <div title="0 810 25 35 10 (appel surtaxé : 0,06 €/min + prix appel)" class="innertel-cnaf">0 810 25 35 10&nbsp;</div>
+                                                                    </span>
+                                                                    <div class="texte-info-cnaf texte-clair-cnaf horaire-cnaf">les lundi, mardi, mercredi et vendredi de 9h à 16h</div>
+                                                                    <div class="etudiant-cnaf">Pour les étudiants :</div><span class="picto picto-sva-cnaf tel-cnaf tel-cartouche-sva-cnaf">
+                                                                        <div title="0 810 29 29 29 (appel surtaxé : 0,06 €/min + prix appel)" class="innertel-cnaf">0 810 29 29 29&nbsp;</div>
+                                                                    </span><div class="texte-info-cnaf texte-clair-cnaf horaire-cnaf">Du lundi au vendredi, de 9h00 à 17h00</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filet-cnaf"></div><div class="titre-cnaf">
+                                                                <span class="texte-ss-titre-cnaf picto-contacter-cnaf picto-enveloppe-bleu">Par courrier</span>
+                                                                <div class="adresse-cnaf">
+                                                                    <div>CAF D'ILLE-ET-VILAINE</div><div></div><div> Cours des Alliés</div>
+                                                                    <div>35028 RENNES CEDEX 9</div>
+                                                                </div>
+                                                            </div><div class="filet-cnaf"></div>
+                                                            <!-- ngIf: contacterMaCafCompletVm.autorisationCourriel --><div class="titre-cnaf">
+                                                                <span class="texte-ss-titre-cnaf picto-contacter-cnaf picto-courriel">Par courriel</span>
+                                                                <div>
+                                                                    <a ui-sref="contactcafcourriel" class="btn btn-block btn-form-valider-cnaf btn-active-cnaf align-middle-cnaf"
+                                                                       href="#/contactcafcourriel"><span class="btn-block">Envoyer un courriel</span></a>
+                                                                </div>
+                                                            </div><!-- end ngIf: contacterMaCafCompletVm.autorisationCourriel --><!-- ngIf: contacterMaCafCompletVm.pagePointsAccueil -->
+                                                            <div class="filet-cnaf"></div><!-- end ngIf: contacterMaCafCompletVm.pagePointsAccueil --><!-- ngIf: contacterMaCafCompletVm.pagePointsAccueil -->
+                                                            <div class="titre-cnaf">
+                                                                <span class="texte-ss-titre-cnaf picto-contacter-cnaf picto-repere">Point d'accueil</span><div>
+                                                                    <a href="#/carto?filtre=antenne" class="btn btn-block btn-form-valider-cnaf btn-active-cnaf align-middle-cnaf">
+                                                                        <span>Trouver un accueil CAF</span>
+                                                                    </a><!-- TODO TROUVER -->
+                                                                </div>
+                                                            </div><!-- end ngIf: contacterMaCafCompletVm.pagePointsAccueil --><!-- ngIf: contacterMaCafCompletVm.presencePriseRendezVous --><!-- ngIf: contacterMaCafCompletVm.presencePriseRendezVous -->
+                                                        </div><!-- end ngSwitchWhen: -->
+                                                    </div>
+                                                </div>
+                                            </div><div class="col-sm-6 col-md-8 col-sm-pull-6 col-md-pull-4">
+                                                <div class="row conteneur-demandes-frequentes-cnaf collapsable-cnaf">
+                                                    <div class="col-sm-12">
+                                                        <h3 class="collapsable-heading-cnaf titre-bloc-cnaf text-uppercase">
+                                                            <a href="javascript:void(0);" aria-expanded="true">
+                                                                <span aria-hidden="true" class="text-primary picto-cadre pull-right picto-chevron-haut">
+                                                                </span> Demandes fréquentes
+                                                            </a>
+                                                        </h3>
+                                                        <p class="message-info-cnaf filet-cnaf">Cliquer sur une question pour accéder à la rubrique concernée</p>
+                                                    </div>
+                                                    <div class="collapsable-body-cnaf col-sm-12 collapse in">
+                                                        <!-- ngSwitchWhen: loading --><!-- ngSwitchWhen: error -->
+                                                        <!-- ngSwitchWhen: loaded --><div>
+                                                            <div class="collapsable-body-cnaf">
+                                                                <div class="questions ouvert-cnaf align-middle-cnaf">
+                                                                    <a href="javascript:void(0);" aria-expanded="true">Comment suivre le traitement de mon dossier ?</a>
+                                                                </div><div class="reponses hide">
+                                                                    <p>Votre caisse d'Allocations familiales a des délais pour traiter les dossiers dont elle a la charge.</p>
+                                                                    <p>
+                                                                        Quand vous faites une demande de prestation, votre Caf l'examine attentivement et, si vous remplissez les conditions nécessaires, elle procède à l'ouverture de votre droit. Au total, le délai entre votre demande et l'octroi d'une prestation par votre Caf varie entre 10 et 30 jours.
+                                                                        Même ouvert tardivement, votre droit n'est jamais perdu. Il donne lieu à un paiement précis et juste.
+                                                                        Il est inutile de téléphoner ou de vous déplacer à l'accueil de votre Caf. En cas de problème dans votre dossier, comme une pièce
+                                                                        manquante (un titre de séjour par exemple), votre Caf ne manquera pas de vous contacter.
+                                                                    </p><br><strong>
+                                                                        Afin de bien suivre le traitement
+                                                                        de votre dossier :
+                                                                    </strong><br>rendez-vous sur
+                                                                    <a href="/redirect/s/Redirect?page=monCompteSuiviDemarchesAlertes" class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf"><span class="btn-block text-left">Mes démarches</span></a>
+                                                                </div><div class="questions ouvert-cnaf btn-lien-cnaf align-middle-cnaf" ng-click="demandesFrequentesVm.openClose(1)"><a href="javascript:void(0);" aria-expanded="true">Ma situation a changé, que dois-je faire ?</a></div>
+                                                                <div class="reponses hide">
+                                                                    <strong>Quelle est votre situation ?</strong><p>Votre situation personnelle, familiale ou professionnelle vient de changer.</p>Ce changement concerne :<ul><li>votre couple : mariage, Pacs, début ou reprise d'une vie commune, divorce, séparation, décès ;</li><li>votre famille : naissance, adoption, départ ou retour d'un enfant, arrivée ou départ d'une personne à votre foyer ;</li><li>votre enfant ou une autre personne vivant dans votre foyer : stage de formation, apprentissage, reprise d'études, entrée dans la vie active, placement ;</li><li>votre travail : début ou reprise d'activité, chômage, expatriation ou détachement, reprise d'études, réduction d'activité, retraite, rente d'accident du travail ;</li><li>votre vie personnelle : hospitalisation, maladie de longue durée, invalidité, départ à l'étranger, incarcération ;</li><li>vos coordonnées personnelles (adresse postale, téléphone, adresse mél) et bancaires.</li></ul><strong>Que devez-vous savoir ?</strong><p>Tout changement de situation peut avoir une conséquence sur le montant de vos aides. Elles peuvent être revues à la hausse (naissance d'un enfant, chômage), à la baisse (début de vie commune) ou même être interrompues. La plupart des aides versées par la Caf sont calculées à partir des ressources du foyer.</p><strong>Que devez-vous faire ?</strong><p>Pour gagner du temps, vérifiez que votre situation est à jour.</p><br><strong>Afin de bien enregistrer vos changements<small class="asterisk-cnaf"><em>*</em></small> de vie familiale et professionnelle :</strong><p>
+                                                                        rendez-vous sur
+                                                                        <a href="/redirect/s/Redirect?page=monCompteMonProfil" class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf">
+                                                                            <span class="btn-block text-left">Consulter ou modifier mon profil</span>
+                                                                        </a>
+                                                                    </p><small><em>* Les changements concernent votre couple, famille, enfant(s) ou autre(s) personne(s) à charge, travail, vie personnelle et coordonnées personnelles et bancaires (voir, ci-dessus, la rubrique Quelle est votre situation ?).</em></small>
+                                                                </div>
+                                                                <div class="questions ouvert-cnaf btn-lien-cnaf align-middle-cnaf" ">
+                                                                    <a href="javascript:void(0);" aria-expanded="true">Quel est le montant de mes paiements ?</a>
+                                                                </div><div class="reponses hide" ng-show="!demandesFrequentesVm.collapsedQuestion[2]">
+                                                                    <p>Le montant de vos prestations est calculé selon des règles de droits précises liées à votre situation familiale (les enfants à charge par exemple) et professionnelle (la prise en compte de vos ressources et de celles des personnes vivant dans votre foyer). Les prestations familiales et sociales sont versées vers le 5 du mois.</p>
+                                                                    <p>Chaque mois, vous recevez les prestations auxquelles vous avez droit pour le mois précédent. Par exemple, entre le 5 et le 8 février, vous recevez les prestations dues pour le mois de janvier.<br></p><br><strong>Afin de connaitre le montant de vos paiements :</strong>
+                                                                    <br>rendez-vous sur <a href="/redirect/s/Redirect?page=monCompteMesPaiements" class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf">
+                                                                        <span class="btn-block text-left">Mes paiements et mes droits</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="questions ouvert-cnaf btn-lien-cnaf align-middle-cnaf">
+                                                                    <a href="javascript:void(0);" aria-expanded="true">
+                                                                        J'aimerais obtenir de l'aide pour mieux utiliser le site caf.fr
+                                                                    </a>
+                                                                </div><div class="reponses hide">
+                                                                    <p>Le site caf.fr vous permet de vous renseigner et de faire des demandes de prestations familiales et sociales. Depuis l'espace personnalisé Mon Compte, vous pouvez consulter vos droits et vos paiements, éditer des attestations, consulter et modifier votre profil allocataire. Vous avez des difficultés pour vous repérer sur le site de la Caf, pour accéder à l'espace Mon Compte ou pour faire des demandes de prestations en ligne ?</p><br><strong>Afin de mieux utiliser le site caf.fr :</strong><p>Pour toute difficulté de navigation sur le site ou pour vous aider dans vos télédéclarations, vous pouvez adresser un courriel à hotline@caf.fr. Un téléconseiller vous contactera rapidement. N'oubliez pas d'indiquer dans le mail : votre numéro de téléphone, votre numéro allocataire et votre département.</p><p>Aucune réponse ne pourra être communiquée à toute demande d'information sur les prestations ou votre dossier. Merci pour cela de contacter votre caisse.</p><br>Le lien Visite guidée vous accompagne pour retrouver les informations à la Une, accéder à votre dossier et aux thèmes qui vous intéressent :<p>
+                                                                        <a href="/redirect/s/Redirect?page=visiteGuidee" target="_blank" class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf">
+                                                                            <span class="btn-block text-left">Visite guidée</span>
+                                                                        </a>
+                                                                    </p>Le moteur de recherche : vous saisissez un mot-clé (exemple : la Prime d'activité) et le site vous propose tous les articles sur le thème choisi.<p>
+                                                                        <a href="/redirect/s/Redirect?page=recherche" target="_blank" class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf"><span class="btn-block text-left">Recherche</span></a>
+                                                                    </p>Le lien Plan du site vous permet d'identifier toutes les rubriques du site caf.fr :<br><a href="/redirect/s/Redirect?page=planDuSite" target="_blank" class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf"><span class="btn-block text-left">Plan du site</span></a>
+                                                                </div>
+                                                                <div class="questions ouvert-cnaf btn-lien-cnaf align-middle-cnaf">
+                                                                    <a href="javascript:void(0);" aria-expanded="true">
+                                                                        Un désaccord avec la Caf ? Comment réclamer, comment contester ?
+                                                                    </a>
+                                                                </div><div class="reponses hide">
+                                                                    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading ouvert-cnaf overriding-link-cnaf collapsed" role="button" id="headingCommentFaireReclamation" data-toggle="collapse" data-parent="#accordion2" href="#collapseCommentFaireReclamation" aria-expanded="true" aria-controls="collapseCommentFaireReclamation">
+                                                                                <a href="javascript:void(0);">
+                                                                                    Comment faire une réclamation ?
+                                                                                </a>
+                                                                            </div><div id="collapseCommentFaireReclamation" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingCommentFaireReclamation">
+                                                                                <div class="panel-body">
+                                                                                    <strong>Quelle est votre situation ?</strong><ul>
+                                                                                        <li>Vous ne comprenez pas une décision de la Caf.</li>
+                                                                                        <li>Vous êtes mécontent du fonctionnement d'un service de votre Caf</li>
+                                                                                        <li>Vous ne parvenez pas à obtenir une réponse claire à vos questions.</li>
+                                                                                    </ul><strong>Que devez-vous savoir ?</strong><p>Votre Caf met tout en œuvre pour traiter, dans les meilleurs délais, les demandes de ses allocataires. Cependant, si vous n'êtes pas satisfait des décisions prises (absence de réponse, désaccord avec la décision, etc.) ou de la qualité du service (qualité de l'accueil, du téléphone, du site caf.fr, etc.) qui vous a été rendu, vous pouvez déposer une réclamation auprès de votre Caf. Celle-ci s'engage à l'étudier et à vous répondre.</p><strong>Que devez-vous faire ?</strong><div>
+                                                                                        Prenez contact avec votre Caf par courriel :
+                                                                                        <!-- ngIf: demandesFrequentesVm.logged --><p>
+                                                                                            <a href="/redirect/s/Redirect?page=monCompteContactCaf#/contactcafcourriel"
+                                                                                               class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf"><span class="btn-block text-left">Contacter ma Caf par courriel</span></a>
+                                                                                        </p><!-- end ngIf: demandesFrequentesVm.logged --><!-- ngIf: !demandesFrequentesVm.logged --><!-- ngIf: !demandesFrequentesVm.logged -->
+                                                                                    </div>
+                                                                                    <p>
+                                                                                        Si vous ne souhaitez pas envoyer votre réclamation par courriel, vous pouvez la déposer par courrier, par téléphone ou en vous déplaçant dans un point d'accueil Caf.<br>Vous pouvez retrouver toutes les coordonnées de votre Caf sur
+                                                                                        <!-- ngIf: demandesFrequentesVm.logged --><span>
+                                                                                            <a href="/redirect/s/Redirect?page=monCompteContactCaf"
+                                                                                               class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf"><span class="btn-block text-left">Contacter Ma Caf</span></a>
+                                                                                        </span><!-- end ngIf: demandesFrequentesVm.logged --><!-- ngIf: !demandesFrequentesVm.logged -->
+                                                                                    </p>*
+                                                                                    <p>Si votre réclamation n'aboutit pas, vous pouvez alors saisir le médiateur administratif de votre Caf. Il intervient lorsque vous avez fait toutes les démarches nécessaires auprès de votre Caf et qu'aucune solution n'a été trouvée. Vous pouvez contacter votre Caf pour savoir comment saisir le médiateur administratif.</p><ins>Attention :</ins> saisir le médiateur ne remplace pas les voies de recours existantes pour contester une décision de la Caf.
+                                                                                </div>
+                                                                            </div>
+                                                                        </div><div class="panel panel-default">
+                                                                            <div class="panel-heading ouvert-cnaf overriding-link-cnaf collapsed" role="button" id="headingContesterDecicisonCnaf" data-toggle="collapse" data-parent="#accordion2" href="#collapseContesterDecicisonCnaf" aria-expanded="true" aria-controls="collapseContesterDecicisonCnaf">
+                                                                                <a href="javascript:void(0);">Comment contester une décision de la Caf ?</a>
+                                                                            </div><div id="collapseContesterDecicisonCnaf" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingContesterDecicisonCnaf">
+                                                                                <div class="panel-body">
+                                                                                    <p>Vous êtes en désaccord avec une décision administrative concernant votre dossier : vous pouvez saisir la Commission de recours amiable dans un délai de deux mois, à compter de la réception de la décision.<br>Un simple courrier suffit. Il n'est pas nécessaire de faire un envoi en recommandé.</p>
+                                                                                    <p>Si votre demande de recours est rejetée, vous disposez de deux mois après réception de la Commission de recours amiable pour saisir le Tribunal des affaires de Sécurité sociale.</p>Les démarches à suivre sont indiquées sur le courrier de la Caf et sur <a href="/redirect/s/Redirect?page=monCompteVoiesDeRecours" class="btn btn-form-cnaf btn-lien-cnaf align-middle-cnaf">
+                                                                                        <span class="btn-block text-left">Voies de recours</span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end ngSwitchWhen: -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <script type="text/javascript">
+var namespace = "ns_Z7_6H4G19K0K0HUA0ATGJQKQA2082_";
+
+angular.module("cnafCommonsApp").run(['CnafUserService', function(CnafUserService){
+	CnafUserService.setCodeOrga("351");
+	CnafUserService.setMatricule("1343384");
+	CnafUserService.setDateEnvCaffr("20170629");
+	CnafUserService.setTokenJWT("Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzNTEtMTM0MzM4NCIsImFsbG9jYXRhaXJlc2RyYWJzbm1vaW5zMWFsbG9jY2p0IjoiYWxsb2NhdGFpcmVzZHJhYnNubW9pbnMxYWxsb2NjanQiLCJhbGxvY2F0YWlyZXNhZmZpY2hlcnJlc3NvdXJjZXMiOiJhbGxvY2F0YWlyZXNhZmZpY2hlcnJlc3NvdXJjZXMiLCJzY29wZSI6ImNhZmZyIiwiYWxsb2NhdGFpcmVzIjoiYWxsb2NhdGFpcmVzIiwiYWxsb2NhdGFpcmVzc2ltdWxhdGlvbiI6ImFsbG9jYXRhaXJlc3NpbXVsYXRpb24iLCJuYmYiOjE0OTg3NTA2MTM3NDQsImlzcyI6InVybjpjbmFmOmZyYW1ld29yazpzdXJldGUiLCJkcmFic25tb2luczIiOiIiLCJhbGxvY2F0YWlyZXNjYWZtaWdyZWVtZHAiOiJhbGxvY2F0YWlyZXNjYWZtaWdyZWVtZHAiLCJpYXQiOjE0OTg3NTA2MjM3NDQsImNvZGVPcmdhIjoiMzUxIiwiYWxsb2NhdGFpcmVzcmVjdWVpbGluZm9ybWF0aW9uIjoiYWxsb2NhdGFpcmVzcmVjdWVpbGluZm9ybWF0aW9uIiwiZGF0ZUVudkNhZmZyIjoiMjAxNzA2MjkiLCJleHAiOjE0OTg3NTA5MjM3NDQsImFsbG9jYXRhaXJlc2RwbiI6ImFsbG9jYXRhaXJlc2RwbiIsImFsbG9jYXRhaXJlc2FmZiI6ImFsbG9jYXRhaXJlc2FmZiIsImFsbG9jYXRhaXJlc3BhamVlbXBsb2kiOiJhbGxvY2F0YWlyZXNwYWplZW1wbG9pIiwiZHJhYnNubW9pbnMxIjoiMTg5NzY5OCwxODk3Njk5Iiwicm9sZXMiOltdLCJhdWQiOiJ1cm46Y25hZjpmcmFtZXdvcms6c3VyZXRlIiwianRpIjoiX2UyYTY0ZmFiZThiNjU5MjFmNzcyZTRjM2QzZGRhNzY5IiwibWF0cmljdWxlIjoiMTM0MzM4NCIsImFsbG9jYXRhaXJlc2RyYWJzbm1vaW5zMXRvdXRlc3BlcnMiOiJhbGxvY2F0YWlyZXNkcmFic25tb2luczF0b3V0ZXNwZXJzIn0.EBjg9IwbGjSexgzDqX6r9xIk3ajDpIzq_RpuGBJnCV58IVruOwLmVvBoprExdzjx_y12dm-Ct2Q2l84kPqr7xVOjnFFwF3IZ-3JMjiqJ3LUOyeSl5oLkhy3-iNu02gJoQMfSReO7lGpmXgSiJwe56tBpmIZo2vH1aAs9Oqawn7fUyY5I7e0a4o-BfrqiD29XQvqtZ9m1W9XJWJPUfLgKnOjOMhdmAvJM5nk3yW0Apcg8KJIAE094oQ8ZbJZWxAHSH4PNS2CRb88wlRV0dvlvFIZxqa9aDG3bzsQ-p9m0PEEBK57yzlk5WxVzQAw2oJBIJ7Hc-EuSTcf-7sr8AZyZ4A");
+
+	CnafUserService.addGroup("allocataires");CnafUserService.addGroup("allocatairespajeemploi");CnafUserService.addGroup("allocatairesdpn");CnafUserService.addGroup("allocatairesrecueilinformation");CnafUserService.addGroup("allocatairescafmigreemdp");CnafUserService.addGroup("allocatairesaff");CnafUserService.addGroup("allocatairesdrabsnmoins1alloccjt");CnafUserService.addGroup("allocatairesdrabsnmoins1toutespers");CnafUserService.addGroup("allocatairesafficherressources");CnafUserService.addGroup("allocatairessimulation");
+}]);
+                    </script>
+                    <script src="https://wwwd.caf.fr/moncompteappli/dist/configPortal.min.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- FIN CONTENU -->
+<!-- DEBUT FOOTER -->
+
+
+
+
+
+<footer id='theme-footer-cnaf' role='contentinfo'><div id="theme-footer-links-cnaf">  <div class="container">    <div class="row">      <ul class="col-sm-12 text-center">        <li>		   <a target="_blank" href="http://www.mon-service-public.fr/">		     <img src="https://www.caf.fr/sites/all/themes/caf_v2/images/btn-service-public.png" alt="Mon Service Public (Nouvelle Fenêtre)" title="Mon Service Public (Nouvelle Fenêtre)">          </a>		 </li>        <li>		   <a target="_blank" href="http://data.caf.fr/">		     <img src="https://www.caf.fr/sites/all/themes/caf_v2/images/btn-cafdata.png" alt="Caf data (Nouvelle Fenêtre)" title="Caf data (Nouvelle Fenêtre)">          </a>		 </li>        <li>		   <a target="_blank" href="http://www.mon-enfant.fr/">		     <img src="https://www.caf.fr/sites/all/themes/caf_v2/images/btn-mon-enfant.png" alt="Mon-enfant.fr (Nouvelle Fenêtre)" title="Mon-enfant.fr (Nouvelle Fenêtre)">          </a>		 </li>      </ul>    </div>  </div></div><div id="theme-footer-content">  <div class="container">    <div class="row">      <ul class="col-md-4 footer-list-link clearfix">        <li class="col-sm-12">		   <a href="http://www.caf.fr/allocataires">allocataires</a>        </li>        <li class="col-sm-6 col-md-12">          <ul>            <li>              <a href="http://www.caf.fr/allocataires/actualites">Actualités</a>            </li>            <li>              <a href="http://www.caf.fr/allocataires/mes-services-en-ligne">Mes services en ligne</a>            </li>            <li>              <a href="http://www.caf.fr/allocataires/droits-et-prestations">Droits et prestations</a>            </li>          </ul>        </li>        <li class="col-sm-6 col-md-12">		   <ul>            <li>              <a href="http://www.caf.fr/allocataires/vies-de-famille">Vies de famille</a>            </li>            <li>              <a href="http://www.caf.fr/allocataires/ma-caf-recherche">Ma Caf</a>            </li>            <li>              <a href="http://www.caf.fr/redirect/redirect.php?page=monCompte">Mon Compte</a>            </li>		   </ul>		 </li>      </ul>      <ul class="col-md-4 footer-list-link clearfix">        <li class="col-sm-12">		   <a href="http://www.caf.fr/partenaires">partenaires</a>        </li>        <li class="col-sm-6 col-md-12">          <ul>            <li>              <a href="http://www.caf.fr/partenaires/comment-devenir-partenaire-de-la-caf">Comment devenir partenaire de la Caf ?</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/famille-et-petite-enfance">Famille et petite enfance</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/vous-accompagnez-la-parentalite">Vous accompagnez la parentalité</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/temps-libre-et-loisirs">Temps libre et loisirs</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/solidarite-et-soutien-financier">Solidarité et soutien financier</a>            </li>          </ul>        </li>        <li class="col-sm-6 col-md-12">		   <ul>            <li>              <a href="http://www.caf.fr/partenaires/logement">Logement</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/soutien-aux-personnes-handicapees">Soutien aux personnes handicapées</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/partenaires-d-accueil">Partenaires d'accueil</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/la-lettre-des-allocations-familiales">La Lettre des Allocations Familiales</a>            </li>		   </ul>		 </li>      </ul>      <ul class="col-md-4 footer-list-link clearfix">        <li class="col-sm-12">		   <a href="http://www.caf.fr/presse-institutionnel">presse-institutionnel</a>        </li>        <li class="col-sm-6 col-md-12">          <ul>            <li>              <a href="http://www.caf.fr/presse-institutionnel/qui-sommes-nous">Qui sommes-nous ?</a>            </li>            <li>              <a href="http://www.caf.fr/presse-institutionnel/presse">Presse</a>            </li>            <li>              <a href="http://www.caf.fr/presse-institutionnel/etudes-et-statistiques">Etudes et statistiques</a>            </li>          </ul>        </li>        <li class="col-sm-6 col-md-12">		   <ul>            <li>              <a href="http://www.caf.fr/presse-institutionnel/international">International</a>            </li>            <li>              <a href="http://www.caf.fr/presse-institutionnel/marches">Marchés</a>            </li>		   </ul>		 </li>      </ul>    </div>  </div></div><div id="theme-footer-copyright">  <div class="container">    <div class="row text-center">      <div class="col-sm-12">        <a target="_blank" href="http://www.caf.fr/allocataires/accessibilite">Accessibilité</a>|        <a target="_blank" href="http://www.caf.fr/allocataires/mentions-legales">Mentions légales</a>      </div>    </div>  </div></div></footer>
+
+<div id='container-sticky-camille-cnaf'><div class='container text-right'><div class='row'><a id='sticky-camille-cnaf' class='text-left' href='http://www.caf.fr/allocataires/visite-guidee'><!----><img width='60' alt='Camille' src='https://www.caf.fr/sites/all/themes/caf_v2/images/sticky-camille.png'><!----><img width='103' alt='Bulle aide' src='https://www.caf.fr/sites/all/themes/caf_v2/images/sticky-camille-aide.png'><!----><span>Aide</span><!----></a></div></div></div>
+
+
+<!-- Javascript CNAF -->
+<script src="https://wwwd.caf.fr/icf-statiques-angular/StatiquesCaffr/js/footerCnaf.min.js?id=1498698187969"></script>
+<!-- Javascript CNAF -->
+<script>
+			function getCookie(name) {
+				var re = new RegExp(name + "=([^;]+)");
+				var value = re.exec(document.cookie);
+				return (value != null) ? unescape(value[1]) : "";
+			}
+
+			function afficheBandeauCookies(){
+				var statusCookies = getCookie("cookie-agreed");
+				if (statusCookies == "") {
+					jQuery("#popup-accept-cookies").slideDown("slow");
+					jQuery('a, input[type=submit], btn').bind('click.accept-cookies', function(){
+						if (jQuery(this).hasClass("not-accept-cookies") == false) {
+							acceptCookies();
+						}
+					});
+					jQuery("#popup-accept-cookies button.agree-button").bind('click', function(){
+						acceptCookies();
+					});
+				}
+			}
+			function acceptCookies() {
+				var date = new Date();
+				date.setDate(date.getDate() + 100);
+				document.cookie = "cookie-agreed=2; path=/; domain=.caf.fr; expires=" + date.toUTCString();
+
+				jQuery("#popup-accept-cookies").slideUp("slow", function() {});
+				jQuery('a, input[type=submit], btn').unbind('click.accept-cookies');
+			}
+
+			$(document).ready(function(){
+
+					pageReadyForTheme();
+
+
+						$.ajax({
+							url: "https://wwwd.caf.fr/wta-portletangular-web/s/GenerateTokenJwt"
+						}).done(function(response) {
+							var token = response.cnafTokenJwt;
+							$.ajax({
+								url: "https://wwwd.caf.fr/api/alertesfront/v1/mon_compte/nb_alertes",
+								headers: { "Authorization": "Bearer "+token}
+							}).done(function(response) {
+								setBadgeAlert(response);
+							});
+						});
+
+
+
+					afficheBandeauCookies();
+					if (angular === undefined || angular.element === undefined || angular.module === undefined) {
+						window.location.replace("https://www.caf.fr/navigateur-obsolete.html");
+					}
+
+			});
+</script>

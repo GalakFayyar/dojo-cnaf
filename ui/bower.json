@@ -1,0 +1,33 @@
+{
+  "name": "geoCaf",
+  "description": "DOJO CAF geolocalisation",
+  "authors": [
+    "Thomas Falcher"
+  ],
+  "version": "0.1.0",
+  "homepage": "https://git.test.services.local/dt_ct_ioda/geopro-init.git",
+  "license": "Apache2",
+  "private": true,
+  "dependencies": {
+    "leaflet": "0.7.7",
+    "leaflet-sidebar": "0.1.8",
+    "leaflet-groupedlayercontrol": "0.4.0",
+    "Leaflet.awesome-markers": "2.0.2",
+    "angular": "1.4.6",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.6",
+    "angular-resource": "1.4.6",
+    "angular-animate": "1.4.6",
+    "angular-sanitize": "1.4.6",
+    "angular-bootstrap": "0.12.1",
+    "angular-route": "1.4.6",
+    "angular-ui-router": "0.2.15",
+    "fontawesome": "~4.7.0",
+    "ionicons": "~2.0.0",
+    "ngprogress": "1.1.2",
+    "async": "1.4.2"
+  },
+  "resolutions": {
+    "angular": "1.4.6"
+  }
+}

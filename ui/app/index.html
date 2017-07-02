@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="appGeoCaf">
+    <head>	
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="description" content="Outil de localisation dese établissements professionnels">
+        <meta name="author" content="Pages Jaunes">
+        <link rel="apple-touch-icon" href="img/favicon-152.png">
+        <link rel="shortcut icon" sizes="196x196" href="img/favicon-196.png">
+
+        <title>GeoCaf</title>
+
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="bower_components/leaflet/dist/leaflet.css" rel="stylesheet" type="text/css">
+        <link href="bower_components/leaflet-sidebar/src/L.Control.Sidebar.css" rel="stylesheet" type="text/css">
+        <link href="bower_components/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.css" rel="stylesheet" type="text/css">
+        
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+        <!-- JS Angular -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/controllers/mainCtrl.js"></script>
+        <script src="js/controllers/indexCtrl.js"></script>
+        <script src="js/controllers/demarcheCtrl.js"></script>
+        <script src="js/controllers/contactCtrl.js"></script>
+        <script src="js/controllers/monCompteCtrl.js"></script>
+        <script src="js/filters/filters.js"></script>
+        <script src="js/services/services.js"></script>
+        
+        <!-- External Librairies -->
+
+        <!-- Bootstrap UI -->
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- PDFMake -->
+        <!-- <script type="text/javascript" src='bower_components/pdfmake/build/pdfmake.min.js'></script>
+        <script type="text/javascript" src='bower_components/pdfmake/build/vfs_fonts.js'></script>-->
+
+        <script>
+            // Optimisation des performances pour Leaflet
+            L_PREFER_CANVAS = true;
+        </script>
+        <script type="text/javascript" src="bower_components/leaflet/dist/leaflet.js"></script>
+        <!--Plugin groupedlayer-->
+        <script type="text/javascript" src="bower_components/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.js"></script>
+
+        <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css" />
+        <script src="bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.min.js"></script>
+
+        <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css" />
+        <script src="bower_components/ngprogress/build/ngProgress.min.js"></script>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+
+        <link href="https://wwwd.caf.fr/themecaf/themes/html/Caf/images/favicon.ico" rel="shortcut icon">
+        <link href="https://wwwd.caf.fr/wps/CacheProxyServlet/colorPalette/moncompte/browserVendor/Google/browserName/Chrome/browserVersion//locale/fr/forwardurl/themecaf/themes/html/Caf/styles/styles.jsp" media="all" rel="stylesheet" type="text/css">
+        <link href="https://wwwd.caf.fr/wps/CacheProxyServlet/colorPalette/moncompte/browserVendor/Google/browserName/Chrome/browserVersion//locale/fr/forwardurl/themecaf/themes/html/Caf/styles/theme/caf/stylesScreenCaf.jsp" media="screen" rel="stylesheet" type="text/css">
+        <link href="https://wwwd.caf.fr/wps/CacheProxyServlet/colorPalette/moncompte/browserVendor/Google/browserName/Chrome/browserVersion//locale/fr/forwardurl/themecaf/themes/html/Caf/styles/stylesPrintCaf.jsp" media="print" rel="stylesheet" type="text/css">
+        <link href="https://wwwd.caf.fr/ifw-ressources-statiques-web/default/styles/frameworkCnaf.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="https://wwwd.caf.fr/wps/CacheProxyServlet/colorPalette/moncompte/browserVendor/Google/browserName/Chrome/browserVersion//locale/fr/forwardurl/themecaf/themes/html/Caf/styles/gabarit/stylesGabaritDefault.jsp" media="screen" rel="stylesheet" type="text/css">
+
+        <style type="text/css">
+            cufon {
+                text-indent: 0 !important;
+            }
+
+            @media screen,projection {
+                cufon {
+                    display: inline !important;
+                    display: inline-block !important;
+                    position: relative !important;
+                    vertical-align: middle !important;
+                    font-size: 1px !important;
+                    line-height: 1px !important;
+                }
+
+                    cufon cufontext {
+                        display: -moz-inline-box !important;
+                        display: inline-block !important;
+                        width: 0 !important;
+                        height: 0 !important;
+                        overflow: hidden !important;
+                        text-indent: -10000in !important;
+                    }
+
+                    cufon canvas {
+                        position: relative !important;
+                    }
+            }
+
+            @media print {
+                cufon {
+                    padding: 0 !important;
+                }
+
+                    cufon canvas {
+                        display: none !important;
+                    }
+            }
+        </style>
+
+        <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/jquery.mask.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript" charset="utf-8"></script>
+        <link href="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/jquery-ui/jquery-ui-1.10.3.custom.min.css" media="all" rel="stylesheet" type="text/css">
+        <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/cufon.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/Optima_nova_LT_Pro_400.font.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/carousel/raphael.js" type="text/javascript"></script>
+
+        <link href="https://wwwd.caf.fr/themecaf/themes/html/Caf/styles/popin.css" media="all" rel="stylesheet" type="text/css">
+        <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/popin.js" type="text/javascript"></script>
+        <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/pj.js" type="text/javascript"></script>
+        <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/clavier-virtuel.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://wwwd.caf.fr/javascript/CAF.js"></script>
+        <script type="text/javascript" src="https://wwwd.caf.fr/javascript/FlashPlugin.js"></script>
+        <script language="VBScript" type="text/vbscript" src="https://wwwd.caf.fr/javascript/FlashPlugin.vbs"></script>
+        <script type="text/javascript" src="https://wwwd.caf.fr/ifw-ressources-statiques-web/default/javascript/gui.js"></script>
+        
+
+        <link href="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/fonts-cnaf/roboto_cnaf.css" rel="stylesheet">
+        <link href="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/StatiquesCaffr/css/bootstrap-wtc.css" rel="stylesheet">
+        <link href="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/StatiquesCaffr/css/bootstrap-theme-wtc.css" rel="stylesheet">
+        <script src="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/StatiquesCaffr/js/bootstrap.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <style>
+            #theme-page,
+            .popup-cookies .popup-content {
+                width: auto !important;
+            }
+
+            .popup-cookies {
+                position: fixed;
+                z-index: 99999999;
+            }
+
+            #theme-page-sidebar {
+                display: none;
+            }
+
+            #theme-page-principal {
+                float: none;
+                margin: 0 auto;
+            }
+        </style>
+
+ 
+
+
+
+    </head>
+
+    <body ng-cloak>
+        <div class="menu-dev">
+            <a href="#/moncompte">Mon Compte</a>
+            <!--<a href="#/carto">Carto</a>-->
+            <a href="#/demarche">Demarche</a>
+            <!--<a href="#/contact">Contact</a>-->
+            <a href="#/moncompte2">Mon Compte 2</a>
+        </div>
+
+        <div ng-view></div>
+    </body>
+</html>

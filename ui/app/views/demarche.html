@@ -1,0 +1,617 @@
+﻿<div id="activemoncompte">
+
+    <div id="popup-accept-cookies" class="popup-cookies">
+        <div class="popup-content">
+            <div class="popup-text">
+                <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre navigation, faciliter votre connexion et recueillir des statistiques. <a title="Utilisation de cookies - En savoir plus" href="https://wwwd.caf.fr/redirect/s/Redirect?page=mentionsLegales" target="_blank" class="not-accept-cookies">en savoir plus</a></p>
+            </div>
+            <div class="popup-buttons">
+                <button class="agree-button" type="button">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="theme-contenu-parent" style="min-width: 640px;">
+        <p class="accessibility">
+            <a href="#theme-page">Allez au contenu</a>,
+            <a href="#theme-page-sidebar">Allez à la navigation</a>
+        </p>
+
+
+        <div class="bootstrap-styles">
+
+            <div id="theme-header-cnaf" class="espace-moncompte-cnaf">
+                <div id="theme-header-links-cnaf">
+                    <div class="container">
+                        <div class="row">
+                            <form class="navbar-macaf-cnaf pull-right hidden" method="POST" action="https://www.caf.fr/allocataires/ma-caf-recherche/">
+                                <label for="ma-caf-code-postal">Ma Caf</label>
+                                <div class="input-group input-group-with-addon-cnaf">
+                                    <input type="text" id="ma-caf-code-postal" name="zipcode" class="form-control" placeholder="Code postal" size="8" maxlength="5">
+                                    <span class="input-group-addon">
+                                        <input type="image" src="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/images/pic-suite_bleu.png" onclick="this.src='https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/images/pic-suite_gris.png'">
+                                        <input type="image" src="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/images/pic-suite_gris.png" class="hidden"> <!-- Preload image -->
+                                    </span>
+                                </div>
+                            </form>
+
+
+                            <script>
+								jQuery(document).ready(function() {
+									jQuery(document).on("focusout", "#theme-header-links-cnaf .navbar-macaf-cnaf", function(e){
+										setTimeout(function(){
+											var focus = jQuery(document.activeElement);
+											if (focus.is("#theme-header-links-cnaf .navbar-macaf-cnaf") || jQuery("#theme-header-links-cnaf .navbar-macaf-cnaf").has(focus).length ) {
+												// garde focus
+											} else {
+												// perd focus
+												jQuery('.navbar-macaf-cnaf').addClass('hidden');jQuery('.navbar-macaf-choix-cnaf').removeClass('hidden');jQuery('#ma-caf-code-postal').val('');
+											}
+										}, 0);
+									});
+								});
+                            </script>
+                            <div class="navbar-macaf-choix-cnaf pull-right">
+
+                                <a href="http://www.caf.fr/allocataires/caf-d-ille-et-vilaine" title="CAF D'ILLE ET VILAINE">Caf 35</a>
+                                <a href="#" class="btn-choix-cnaf" onclick="jQuery('.navbar-macaf-choix-cnaf').addClass('hidden');jQuery('#ma-caf-code-postal').val('');jQuery('.navbar-macaf-cnaf').removeClass('hidden');jQuery('#ma-caf-code-postal').focus();return false;" title="S'informer sur une autre Caf"><img class="pull-right" src="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/images/pic_modifier.png"></a>
+                            </div>
+
+                            <div class="navbar-links-cnaf pull-left">
+                                <span class="navbar-links-item-cnaf active">
+                                    <a class="text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=allocataires" title="Espace allocataires">Allocataires</a>
+                                </span>
+                                <span class="navbar-links-item-cnaf">
+                                    <a class="text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=partenaires" title="Espace partenaires">Partenaires</a>
+                                </span>
+                                <span class="navbar-links-item-cnaf">
+                                    <a class="text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=presseInstitutionnel" title="Espace presse et institutionnel">
+                                        <span class="hidden-xs">Presse et institutionnel</span>
+                                        <span class="visible-xs">Presse/Instit.</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="theme-header-content-cnaf" class="affix" style="width: 708px;">
+                    <div class="container">
+                        <div class="row">
+                            <a class="btn btn-active-cnaf btn-burger-cnaf collapsed text-uppercase" data-toggle="collapse" data-target="#theme-menu-collapse-cnaf" aria-expanded="false" href="#" onclick="return false">
+                                <span class="picto picto-burger"></span>
+                                <span>Menu</span>
+                            </a>
+                            <a class="btn btn-domaine-cnaf" href="https://wwwd.caf.fr/redirect/s/Redirect?page=accueilCaffr">
+                                <img alt="caf.fr" src="https://wwwd.caf.fr/icf-ressources-statiques-rwd-web/images/logo_caf-fr.png">
+                            </a>
+                            <div>
+                                <div class="separator hidden-xs hidden-sm"></div>
+                            </div>
+                            <div class="titre-cnaf">
+
+                                <div class="sur-titre-cnaf hidden-xs hidden-sm text-uppercase">
+                                    Mon Compte
+                                </div>
+
+
+                                <div class="sous-titre-cnaf hidden-xs hidden-sm text-uppercase">
+                                    Changement de situation
+                                </div>
+
+                            </div>
+                            <a class="btn text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=recherche">
+                                <span class="picto picto-recherche"></span>
+                                <span class="hidden-xs">Rechercher</span>
+                            </a>
+
+
+                            <a id="btn-menu-moncompte-cnaf" class="btn text-uppercase collapsed" data-toggle="collapse" data-target="#theme-menu-moncompte-collapse-cnaf" aria-expanded="false" href="#" onclick="return false">
+                                <span class="picto picto-mon-compte"></span>
+                                <span class="hidden-xs">PAPA OUTE</span>
+                            </a>
+                            <a class="btn hidden-xs hidden-sm text-uppercase" href="https://wwwd.caf.fr/redirect/s/Redirect?page=monCompteDeconnexion">
+                                <span class="picto picto-mon-compte-deconnexion"></span>
+                                Déconnexion
+                            </a>
+
+                            <a class="btn btn-logo-cnaf hidden-xs" href="https://wwwd.caf.fr/redirect/s/Redirect?page=accueilCaffr">
+
+                                <img alt="Accueil caf.fr" src="https://www.caf.fr/sites/all/themes/caf_v2/images/logoCNAF.png">
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="theme-menu-cnaf" role="navigation">
+                <div id="theme-menu-content-cnaf">
+                    <div class="container">
+                        <div id="theme-menu-moncompte-collapse-cnaf" class="collapse navbar-collapse" aria-expanded="true" role="menu">
+                            <ul class="nav navbar-nav">
+
+                                <li class="dropdown"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/tableaudebord/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS0dMRjkwQURGVkkzUkQyMDA0/" title="Accueil Mon Compte">Accueil Mon Compte</a></li>
+                                <li role="separator" class="divider-light"></li>
+                                <li class="dropdown"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/mespaiementsmesdroits/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS0dDTkEwQURWUzVVNFUyMEcy/" title="Consulter mes paiements et droits">Consulter mes paiements et droits</a></li>
+                                <li role="separator" class="divider-light"></li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#" title="Consulter mes démarches">Consulter mes démarches</a><ul class="dropdown-menu"><li class="dropdown"><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/consultermesdemarches/mesdemarchesenligne/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN19QTzFHSEtTMEc4T0s3MEk3NVBPMkdWMTBHNi9aNl9QTzFHSEtTMEdPMTZFMEkxNDNHQ0xCMjBRMS9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="Mes démarches en ligne">Mes démarches en ligne</a></li><li role="separator" class="divider-light"></li><li class="dropdown"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/consultermesdemarches/lacafmedemande/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN19QTzFHSEtTMEcwN0o4MEFPUE5GTEdHMjA0MS9aNl9QTzFHSEtTMEcwN0o4MEFPUE5GTEdHMjA4My9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="La Caf me demande">La Caf me demande</a></li><li role="separator" class="divider-light"></li><li class="dropdown"><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/consultermesdemarches/mescourriers/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2X1BPMUdIS1MwR09QRTMwSUU3UVRFQ00xOEQ0/" title="Mes courriers">Mes courriers</a></li></ul></li>
+                                <li role="separator" class="divider-light"></li>
+                                <li class="dropdown"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/mesattestations/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS0dDTkEwQURWUzVVNFUyMDg1/" title="Télécharger une attestation">Télécharger une attestation</a></li>
+                                <li role="separator" class="divider-light"></li>
+                                <li class="dropdown"><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/declarermesressourcesannuelles/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN19QTzFHSEtTMEcwS0w4MEkxMk9KQUcxMzAwMy9aNl9QTzFHSEtTMEdPRE04MElVRDMwRkVSMTBLNi9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="Déclarer mes ressources annuelles">Déclarer mes ressources annuelles</a></li>
+                                <li role="separator" class="divider-light"></li>
+                                <li class="dropdown"><a class="active" href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/monprofil/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2X1BPMUdIS1MwR09TRDMwSTE0M1AzRlEwME8w/" title="Déclarer un changement">Déclarer un changement</a></li>
+                                <li role="separator" class="divider-light"></li>
+                                <li class="dropdown"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/faireunedemandedeprestation/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS09SMTEwQUk3N1RQVTgzMDA0/" title="Simuler ou demander une prestation">Simuler ou demander une prestation</a></li>
+                                <li role="separator" class="divider-light"></li>
+                                <li class="dropdown"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/contactermacaf/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswSzBIVUEwQVRHSlFLUUEyMEc0/" title="Contacter ma Caf">Contacter ma Caf</a></li>
+                                <li role="separator" class="divider-light"></li>
+                                <li class="dropdown"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/modifiermonmotdepasse/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS09UQkMwQVRJTlVORjYyMDA0/" title="Modifier mon mot de passe">Modifier mon mot de passe</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown item-deconnexion-cnaf"><a class="btn btn-block btn-form-cnaf btn-lien-cnaf align-middle-cnaf" title="Déconnexion" href="https://wwwd.caf.fr/redirect/s/Redirect?page=monCompteDeconnexion"><span class="picto picto-mon-compte-deconnexion"></span>Déconnexion</a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="theme-contenu-cnaf" style="margin-top: 80px;"></div>
+        </div>
+
+        <div id="theme-page">
+
+
+
+
+
+
+
+
+
+
+
+            <div id="theme-page-sidebar">
+
+
+
+
+                <ul id="menu"><li><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/tableaudebord/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS0dMRjkwQURGVkkzUkQyMDA0/" title="Accueil">Accueil</a></li><li><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/mespaiementsmesdroits/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS0dDTkEwQURWUzVVNFUyMEcy/" title="Mes paiements et mes droits">Mes paiements et mes droits</a></li><li class="sub"><a href="#" title="Consulter mes démarches">Consulter mes démarches</a><ul style="display: none;"><li><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/consultermesdemarches/mesdemarchesenligne/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN19QTzFHSEtTMEc4T0s3MEk3NVBPMkdWMTBHNi9aNl9QTzFHSEtTMEdPMTZFMEkxNDNHQ0xCMjBRMS9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="Mes démarches en ligne">Mes démarches en ligne</a></li><li><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/consultermesdemarches/lacafmedemande/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN19QTzFHSEtTMEcwN0o4MEFPUE5GTEdHMjA0MS9aNl9QTzFHSEtTMEcwN0o4MEFPUE5GTEdHMjA4My9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="La Caf me demande">La Caf me demande</a></li><li><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/consultermesdemarches/mescourriers/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2X1BPMUdIS1MwR09QRTMwSUU3UVRFQ00xOEQ0/" title="Mes courriers">Mes courriers</a></li></ul></li><li><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/mesattestations/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS0dDTkEwQURWUzVVNFUyMDg1/" title="Mes attestations">Mes attestations</a></li><li><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/declarermesressourcesannuelles/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN19QTzFHSEtTMEcwS0w4MEkxMk9KQUcxMzAwMy9aNl9QTzFHSEtTMEdPRE04MElVRDMwRkVSMTBLNi9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="Déclarer mes ressources annuelles">Déclarer mes ressources annuelles</a></li><li class="sub"><a href="#" title="Estimer vos droits">Estimer vos droits</a><ul style="display: none;"><li><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/estimervosdroits/lapaje/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN19QTzFHSEtTMEc4RDMwMEkzUEJDRk5PMDA4NC9aNl9QTzFHSEtTMEdPMTZFMEkxNDNHQ0xCMjBPNy9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="La Paje">La Paje</a></li><li><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/estimervosdroits/lersa/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN182SDRHMTlLMEs4QjhCMEE5SjM4VUgzMjAwNi9aNl9QTzFHSEtTMEdPMTZFMEkxNDNHQ0xCMjA0MS9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="Le Rsa">Le Rsa</a></li><li><a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/estimervosdroits/laideaulogement/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN19QTzFHSEtTMEc4VDQxMElSTFQxNlNHMjAwNC9aNl9QTzFHSEtTMEdPMTZFMEkxNDNHQ0xCMjBLNC9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="L'aide au logement">L'aide au logement</a></li><li><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/estimervosdroits/laprimedactivite/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L0lDU0NTSUtVSkNncFJBISEvb0VvUUFBSVFKQUFNVWdnR0dRWkRncENsd1FBIS80SkNoRDJtWVJ5RUlSU1pDbEdveC9aN182SDRHMTlLMEs4QjhCMEE5SjM4VUgzMjAwNC9aNl82SDRHMTlLMEs4VEQ4MEFVUk1WQUhBMTAwNS9ub3JtYWwvZnJta0NuYWZBY3Rpb24vcmVpbml0aWFsaXNlcg!!/" title="La prime d'activité">La prime d'activité</a></li></ul></li><li class="sub on"><a class="on" href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/monprofil/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2X1BPMUdIS1MwR09TRDMwSTE0M1AzRlEwME8w/" title="Mon profil">Mon profil</a><ul></ul></li><li class="sub"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/faireunedemandedeprestation/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS09SMTEwQUk3N1RQVTgzMDA0/" title="Simuler ou demander une prestation">Simuler ou demander une prestation</a><ul style="display: none;"></ul></li><li class="sub"><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/contactermacaf/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswSzBIVUEwQVRHSlFLUUEyMEc0/" title="Contacter ma Caf">Contacter ma Caf</a><ul style="display: none;"></ul></li><li><a href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/modifiermonmotdepasse/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS09UQkMwQVRJTlVORjYyMDA0/" title="Modifier mon mot de passe">Modifier mon mot de passe</a></li></ul>
+
+
+
+                <!-- include MSP -->
+
+
+
+
+
+
+
+            </div>
+
+
+
+            <div id="theme-page-principal" style="width: 708px; height: 461.739px; overflow: hidden;">
+
+                <div id="theme-page-principal-contenu" style="transform: scale(0.992987); transform-origin: 0px 0px 0px; width: 100.706%;">
+
+
+
+
+
+
+
+
+
+                    <div id="theme-filariane" class="theme-filariane-moncompte" style="width: 670.83px;">
+                        <ul>
+
+
+
+                            <li><a href="https://wwwd.caf.fr/redirect/s/Redirect?page=accueilCaffr" title="Accueil">Accueil</a></li>
+
+
+
+
+
+
+
+
+                            <li class="separator-breadcrumbs">&nbsp;&gt;&nbsp;</li>
+                            <li>
+
+                                <a title="Mon Compte" href="https://wwwd.caf.fr/redirect/s/Redirect?page=monCompte">
+
+                                    Mon Compte
+
+                                </a>
+
+                            </li>
+
+
+
+
+
+
+
+
+
+
+                            <li class="separator-breadcrumbs">&nbsp;&gt;&nbsp;</li>
+                            <li>
+
+                                <a title="Mon profil" href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/monprofil/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2X1BPMUdIS1MwR09TRDMwSTE0M1AzRlEwME8w/">
+
+
+                                    Mon profil
+                                </a>
+                            </li>
+
+
+
+
+
+
+
+
+
+
+
+                            <li class="separator-breadcrumbs">&nbsp;&gt;&nbsp;</li>
+                            <li>
+                                Changement de situation
+                            </li>
+
+
+
+
+
+
+                        </ul>
+                    </div>
+
+
+
+                    <script>
+										var dateExpireCookie = new Date();
+										dateExpireCookie.setTime(dateExpireCookie.getTime() + (24 * 60 * 60 * 1000));
+										document.cookie = "modeAffichage=web; path=/; domain=.caf.fr; expires=" + dateExpireCookie.toGMTString();
+                    </script>
+
+                    <script>
+										var dateExpireCookieSessionCaf = new Date();
+										dateExpireCookieSessionCaf.setTime(dateExpireCookieSessionCaf.getTime() + (24 * 60 * 60 * 1000));
+										document.cookie = "session_caf=351; path=/; domain=.caf.fr; expires=" + dateExpireCookieSessionCaf.toGMTString();
+                    </script>
+
+
+
+
+                    <div id="theme-contenu-page">
+
+
+                        <div id="theme-bloc-bar-moncompte">
+                            <div class="theme-bloc-bar-moncompte-contenu">
+                                <span class="bienvenue"><strong>Bienvenue</strong> PAPA OUTE</span>
+
+                                <a href="https://wwwd.caf.fr/redirect/s/Redirect?page=monCompte">Retour à l'accueil</a>
+
+                                <a class="print" href="#">Imprimer</a>
+
+
+
+                                <a class="modifier-mdp" href="http://wwwd.caf.fr/wps/myportal/caffr/moncompte/modifiermonmotdepasse/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2XzZINEcxOUswS09UQkMwQVRJTlVORjYyMDA0/"><img src="https://wwwd.caf.fr/themecaf/themes/html/Caf/images/cadenas.png" alt="Modifier mot de passe" title="Modifier mot de passe"></a>
+
+
+                                <span class="derniere-connexion">Dernière connexion le 29/06/2017 à 17:11</span>
+                            </div>
+                        </div>
+                        <div class="clear">&nbsp;</div>
+
+
+
+
+
+                        <table class="layoutRow" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td valign="top">
+                                        <table class="layoutColumn" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr class="row1">
+                                                    <td style="width:100%;" valign="top">
+                                                        <a name="Z7_PO1GHKS0GGD440I1MV30VO3003"></a><div class="wpsPortletBody">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                            <script>
+	var secondes = 1180;
+    var y = 1;
+    var stopCompteurPopup = false;
+    var x = 20;
+
+    function startClock()
+    {
+    	secondes = secondes-y;
+    	//document.frm.clock.value = secondes
+
+    	if(secondes==0)
+    	{
+    		<!-- newWindow('/wti-webtelei-web/PopupTimeOut.jsp', 'SessionTimeOut', 200, 250, 'no'); -->
+
+		    var popin = jQuery('#popin');
+		    jQuery('#popin-titre', popin).text("");
+		    jQuery('#popin-contenu', popin).html("<b>Attention ! Votre session expire dans <span id='ejs_texte'></span> secondes.<br/>Cliquez sur &#34;Continuer&#34; pour continuer la saisie.</b><br/>");
+		    jQuery('a[class*=bouton]:not([class*=popin-btn-continuer])', popin).css('display', 'none');
+		    jQuery('a[class*=bouton][class*=popin-btn-continuer]', popin).css('display', 'inline');
+		    jQuery('a[class*=bouton][class*=popin-btn-continuer]', popin).attr('onclick', '').click(function() { rafraichir();return false;});
+		    centerPopin(popin.attr('id'));
+		    loadPopin(popin.attr('id'));
+
+    		startClockPopup();
+       	}
+       	else
+       	{
+       		setTimeout("startClock()", 1000);
+       	}
+	}
+	window.onload=function()   {startClock();}
+
+
+
+    function startClockPopup(){
+    	if (stopCompteurPopup)
+    	{
+    		x = 20;
+    		stopCompteurPopup = false;
+    		secondes = 1180 ;
+		    startClock();
+    	}
+    	else
+    	{
+    		x = x-y;
+       	var popin = jQuery('#popin');
+    		if( x>0){
+       		//x=3;
+       		jQuery('#ejs_texte', popin).html("" + x);
+        	setTimeout("startClockPopup()", 1000);
+
+       		}
+	       	else
+        	{
+        		stopCompteurPopup = true;
+        		var contenuPopup = "<div id='popin-titre'></div><p id='popin-contenu'><b>Aucune action n'a &eacute;t&eacute; faite sur cet écran depuis 20 minutes . Votre session a expir&eacute;.</b><br/><br/></p>";
+        		contenuPopup = contenuPopup + "<div class='barre-boutons'><a onclick='disablePopin(\"popin\")' href='/redirect/s/Redirect?page=monCompte' class='bouton' style='display: inline;'>Quitter</a></div>";
+        		popin.html("" + contenuPopup);
+        	}
+
+    	}
+
+        //document.frm.clock.value = x
+
+
+        }
+
+    function rafraichir(){
+    	jQuery.ajax({
+		    type: "GET",
+		    url: "/wti-webtelei-web/RefreshSession.jsp",
+		    success: function(){
+		    	stopCompteurPopup = true;
+		    	disablePopin("popin");
+
+		    },
+		    error: function() {
+		    }
+		  });
+    }
+
+
+
+                                                            </script>
+                                                            <div id="popin" style="top: 257px; left: 150px;">
+                                                                <div id="popin-titre"></div>
+                                                                <p id="popin-contenu"> </p>
+                                                                <div class="barre-boutons">
+                                                                    <a class="bouton popin-btn-continuer" href="#" onclick="disablePopin(&quot;popin&quot;)">Continuer</a>
+                                                                    <a class="bouton popin-btn-annuler" href="#" onclick="disablePopin(&quot;popin&quot;)">Annuler</a>
+                                                                    <a class="bouton popin-btn-confirmer" href="#" onclick="disablePopin(&quot;popin&quot;)">Confirmer</a>
+                                                                </div>
+                                                            </div>
+                                                            <div id="popin-background" style="height: 614px; width: 706.9px;">
+                                                            </div>
+
+
+
+
+                                                            <form name="ns_Z7_PO1GHKS0GGD440I1MV30VO3003_SbSuiviScSitFam" method="POST" action="/wps/myportal/caffr/moncompte/monprofil/changementdesituation/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/pw/Z7_PO1GHKS0GGD440I1MV30VO3003/act/id=cldMtjP2rWQFB/360061853788/=/">
+
+
+                                                                <div class="barre-progression">
+
+                                                                    <ul id="etapes">
+
+
+                                                                        <li class="un"><span class="gauche">&nbsp;</span><span class="milieu">Engagement</span><span class="droite">&nbsp;</span></li>
+
+                                                                        <li class="etape-deux"><span class="milieu">Saisie</span><span class="droite">&nbsp;</span></li>
+
+                                                                        <li class="trois"><span class="milieu">Fin</span><span class="droite">&nbsp;</span></li>
+
+                                                                    </ul>
+                                                                    <br><br><br><br>
+                                                                </div>
+                                                                <div class="contenu-formulaire-tableau">
+
+
+                                                                    <p class="asterisque">Les champs précédés d'un astérisque (*) sont obligatoires</p>
+
+                                                                    <div class="CadreFormulaire">
+                                                                        <div class="col2" id="contenu-page">
+                                                                            <h1><span id="titreEcran">Situation familiale</span></h1>
+
+
+                                                                            <fieldset>
+
+                                                                                <label for="repChgSitFam" class="cell width21">
+                                                                                    <acronym title="champ obligatoire" class="aster">*</acronym> Changement de situation familiale  :&nbsp;
+                                                                                </label>
+                                                                                <div class="cell width105">
+                                                                                    <input type="radio" name="repChgSitFam" value="O" class="borneBoutons"> Oui
+                                                                                    <input type="radio" name="repChgSitFam" value="N" class="borneBoutons"> Non
+                                                                                </div>
+
+                                                                                <div class="clear paddingbottom1"><span class="petite-police">Unions, séparations, ou changements de situation des couples ou personnes vivant seules</span></div>
+
+
+                                                                                <label for="repDclDcOui" class="fleft width21 alignright">
+                                                                                    <acronym title="champ obligatoire" class="aster">*</acronym> Déclaration du décès &nbsp;&nbsp;<br>du conjoint :&nbsp;
+                                                                                </label>
+                                                                                <div class="cell width105 lignes-2">
+                                                                                    <input type="radio" name="repDclDc" value="O" class="borneBoutons"> Oui
+                                                                                    <input type="radio" name="repDclDc" value="N" class="borneBoutons"> Non
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div id="tableau-recapitulatif">
+
+                                                                </div>
+
+                                                                <div class="barre-boutons-tableau">
+                                                                    <div class="centre">
+
+                                                                        <input type="button" name="BCTrouver" onclick="javascript:location.href='#/carto?filtre=mairie'" value="Trouver justificatif" id="BCTrouver" class="bouton2" style="width:170px" title="Trouver formulaire">
+
+
+                                                                        <a href="https://wwwd.caf.fr/wps/myportal/caffr/moncompte/monprofil/changementdesituation/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOID_A3dPbyDDdzdXUxMDDwNfcOMDcL8jQ0MDIAKIpEV-Ae7GAMVmBgHGLsFAuVNiNNvgAM4GhDSH64fhaoEzQX-BgQUgJwIVoDHDZFAR5rjdoWxfkFuaIRBZkA2APCMcKI!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/pw/Z7_PO1GHKS0GGD440I1MV30VO3003/ren/p=actionFormCnaf=fr.caf.portlet.WebTeleproceduresInternetviewQCPAbandon.do/=/" class="lien-bouton">
+                                                                            Quitter
+                                                                        </a>
+
+                                                                        <input type="submit" name="BCContinuer" value="Continuer" id="BCContinuer" class="bouton2" title="Continuer">
+
+
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </form>
+
+
+
+
+
+
+
+
+                                                            <script type="text/javascript">
+<!--
+xtnv=document;
+xtsd="https://logs1186";
+xtsite="516084";
+xtn2="5";
+xtpage="mon_profil::changement_de_situation::scsitfam";
+xtergo="0";
+xt_multc="&x1=1&x2=8&x3=5&x4=&x5=&x6=&x8=351";
+xt_at="351-1343384";
+xt_ac="2";
+if (window.xtparam!=null){window.xtparam+=xt_multc+"&ac="+xt_ac+"&at="+xt_at;}
+else{window.xtparam=xt_multc+"&ac="+xt_ac+"&at="+xt_at;};
+-->
+                                                            </script>
+                                                            <script type="text/javascript" src="https://wwwd.caf.fr/xtcore.js"></script>
+                                                            <noscript>
+                                                                &lt;img width="1" height="1" src="https://logs1186.xiti.com/hit.xiti?s=516084&amp;s2=5&amp;p=mon_profil::changement_de_situation::scsitfam&amp;x1=1&amp;x2=8&amp;x3=5&amp;x4=&amp;x5=&amp;x6=&amp;x8=351&amp;at=351-1343384&amp;ac=2" &gt;
+                                                            </noscript>
+
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="clear-page">&nbsp;</div>
+        </div>
+
+
+        <div class="bootstrap-styles">
+
+            <footer id="theme-footer-cnaf" role="contentinfo"><div id="theme-footer-links-cnaf">  <div class="container">    <div class="row">      <ul class="col-sm-12 text-center">        <li>		   <a target="_blank" href="http://www.mon-service-public.fr/">		     <img src="https://www.caf.fr/sites/all/themes/caf_v2/images/btn-service-public.png" alt="Mon Service Public (Nouvelle Fenêtre)" title="Mon Service Public (Nouvelle Fenêtre)">          </a>		 </li>        <li>		   <a target="_blank" href="http://data.caf.fr/">		     <img src="https://www.caf.fr/sites/all/themes/caf_v2/images/btn-cafdata.png" alt="Caf data (Nouvelle Fenêtre)" title="Caf data (Nouvelle Fenêtre)">          </a>		 </li>        <li>		   <a target="_blank" href="http://www.mon-enfant.fr/">		     <img src="https://www.caf.fr/sites/all/themes/caf_v2/images/btn-mon-enfant.png" alt="Mon-enfant.fr (Nouvelle Fenêtre)" title="Mon-enfant.fr (Nouvelle Fenêtre)">          </a>		 </li>      </ul>    </div>  </div></div><div id="theme-footer-content">  <div class="container">    <div class="row">      <ul class="col-md-4 footer-list-link clearfix">        <li class="col-sm-12">		   <a href="http://www.caf.fr/allocataires">allocataires</a>        </li>        <li class="col-sm-6 col-md-12">          <ul>            <li>              <a href="http://www.caf.fr/allocataires/actualites">Actualités</a>            </li>            <li>              <a href="http://www.caf.fr/allocataires/mes-services-en-ligne">Mes services en ligne</a>            </li>            <li>              <a href="http://www.caf.fr/allocataires/droits-et-prestations">Droits et prestations</a>            </li>          </ul>        </li>        <li class="col-sm-6 col-md-12">		   <ul>            <li>              <a href="http://www.caf.fr/allocataires/vies-de-famille">Vies de famille</a>            </li>            <li>              <a href="http://www.caf.fr/allocataires/ma-caf-recherche">Ma Caf</a>            </li>            <li>              <a href="http://www.caf.fr/redirect/redirect.php?page=monCompte">Mon Compte</a>            </li>		   </ul>		 </li>      </ul>      <ul class="col-md-4 footer-list-link clearfix">        <li class="col-sm-12">		   <a href="http://www.caf.fr/partenaires">partenaires</a>        </li>        <li class="col-sm-6 col-md-12">          <ul>            <li>              <a href="http://www.caf.fr/partenaires/comment-devenir-partenaire-de-la-caf">Comment devenir partenaire de la Caf ?</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/famille-et-petite-enfance">Famille et petite enfance</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/vous-accompagnez-la-parentalite">Vous accompagnez la parentalité</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/temps-libre-et-loisirs">Temps libre et loisirs</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/solidarite-et-soutien-financier">Solidarité et soutien financier</a>            </li>          </ul>        </li>        <li class="col-sm-6 col-md-12">		   <ul>            <li>              <a href="http://www.caf.fr/partenaires/logement">Logement</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/soutien-aux-personnes-handicapees">Soutien aux personnes handicapées</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/partenaires-d-accueil">Partenaires d'accueil</a>            </li>            <li>              <a href="http://www.caf.fr/partenaires/la-lettre-des-allocations-familiales">La Lettre des Allocations Familiales</a>            </li>		   </ul>		 </li>      </ul>      <ul class="col-md-4 footer-list-link clearfix">        <li class="col-sm-12">		   <a href="http://www.caf.fr/presse-institutionnel">presse-institutionnel</a>        </li>        <li class="col-sm-6 col-md-12">          <ul>            <li>              <a href="http://www.caf.fr/presse-institutionnel/qui-sommes-nous">Qui sommes-nous ?</a>            </li>            <li>              <a href="http://www.caf.fr/presse-institutionnel/presse">Presse</a>            </li>            <li>              <a href="http://www.caf.fr/presse-institutionnel/etudes-et-statistiques">Etudes et statistiques</a>            </li>          </ul>        </li>        <li class="col-sm-6 col-md-12">		   <ul>            <li>              <a href="http://www.caf.fr/presse-institutionnel/international">International</a>            </li>            <li>              <a href="http://www.caf.fr/presse-institutionnel/marches">Marchés</a>            </li>		   </ul>		 </li>      </ul>    </div>  </div></div><div id="theme-footer-copyright">  <div class="container">    <div class="row text-center">      <div class="col-sm-12">        <a target="_blank" href="http://www.caf.fr/allocataires/accessibilite">Accessibilité</a>|        <a target="_blank" href="http://www.caf.fr/allocataires/mentions-legales">Mentions légales</a>      </div>    </div>  </div></div></footer>
+
+            <div id="container-sticky-camille-cnaf"><div class="container text-right"><div class="row"><a id="sticky-camille-cnaf" class="text-left" href="http://www.caf.fr/allocataires/visite-guidee"><!----><img width="60" alt="Camille" src="https://www.caf.fr/sites/all/themes/caf_v2/images/sticky-camille.png"><!----><img width="103" alt="Bulle aide" src="https://www.caf.fr/sites/all/themes/caf_v2/images/sticky-camille-aide.png"><!----><span>Aide</span><!----></a></div></div></div>
+
+            <!-- Javascript CNAF -->
+            <script src="/icf-ressources-statiques-rwd-web/StatiquesCaffr/js/footerCnaf-wtc.min.js"></script>
+            <!-- Javascript CNAF -->
+            <script>
+			$(document).ready(function(){
+
+					jQuery.ajax({
+						url: "/wta-portletangular-web/s/GenerateTokenJwt"
+					}).done(function(response) {
+						var token = response.cnafTokenJwt;
+						jQuery.ajax({
+							url: "/api/alertesfront/v1/mon_compte/nb_alertes",
+							headers: { "Authorization": "Bearer "+token}
+						}).done(function(response) {
+							setBadgeAlert(response);
+						});
+					});
+
+			});
+            </script>
+        </div>
+
+        <div id="media-queries"></div>
+
+    </div>
+
+    <script>
+				function getCookieAgreedValidity() {
+					return 100;
+				}
+    </script>
+    <script src="https://wwwd.caf.fr/themecaf/themes/html/Caf/js/base.js" type="text/javascript" charset="utf-8"></script>
+
+    <div id="popin">
+        <div id="popin-titre"></div>
+        <p id="popin-contenu"> </p>
+        <div class="barre-boutons">
+            <a class="bouton popin-btn-continuer" href="#" onclick="disablePopin(&quot;popin&quot;)">Continuer</a>
+            <a class="bouton popin-btn-annuler" href="#" onclick="disablePopin(&quot;popin&quot;)">Annuler</a>
+            <a class="bouton popin-btn-confirmer" href="#" onclick="disablePopin(&quot;popin&quot;)">Confirmer</a>
+        </div>
+    </div>
+    <div id="popin-background">
+    </div>
+</div>
